@@ -1,12 +1,12 @@
 # Terraform Settings Block
-terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-      #version = "~> 3.21" # Optional but recommended in production
-    }
-  }
-}
+# terraform {
+#   required_providers {
+#     aws = {
+#       source = "hashicorp/aws"
+#       #version = "~> 3.21" # Optional but recommended in production
+#     }
+#   }
+# }
 
 # Provider Block
 provider "aws" {
@@ -26,9 +26,21 @@ tf.jsonの文法
 
 # Block type: トップレベルに記述するか、そのブロックの中に入れ子に記述する。
 
-- トップレベルのBlockTypeの例:
-  - resource
-  - provider
+- トップレベルのBlockType:
+
+  - 基本ブロック:
+    - resource: terraformの設定についてを記述する。
+    - provider: 使用するプロバイダを指定する。(AWS, Azure, GCP, ..など)
+    - Resource: リソースの定義。
+  
+  - 変数ブロック:
+    - Input Variables: 
+    - Oputput Values:
+    - Local Values:
+  
+  - calling/Referencingブロック:
+    - Data Sources:   情報をクラウドプロバイダから取得するための記述。
+    - Modules Block:  moduleとして定義して、それを呼び出して使うことによって、リソースを柔軟に作る。 
 
 - ブロック内に入れ子でBlockTypeの例:
   - provisioners
