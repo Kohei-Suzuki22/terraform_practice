@@ -1,3 +1,14 @@
+/*
+.terraform.lock.hclファイルについて
+
+このファイルは、providerの設定を見て、必要なproviderパッケージのバージョンをハッシュとして管理しておく。
+それにより、前回 plan, applyなどをしたタイミングと同じバージョンのパッケージを使うことができる。
+
+※ もし、このファイルが見つからない場合terraformは、宣言されたバージョン制約の中で最新のproviderパッケージをダウンロードしてくる。
+※ このファイルがすでに存在している場合は、同じバージョンのproviderパッケージが使われる。
+
+*/
+
 # This file is maintained automatically by "terraform init".
 # Manual edits may be lost in future updates.
 
