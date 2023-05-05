@@ -17,7 +17,7 @@ terraform {
   # ※ ここで記述したプロバイダのバージョンが、"terraform init" した際にダウンロードされる。
   required_providers {
     aws = {
-      # 
+      # source = "registry.terraform.io/hashicorp/aws" のように本来は, <HOSTNAME>/<NAMESPACE>/<TYPE>で指定するが、HOSTNAMEはデフォルトでegistry.terraform.ioとなるので省略可能。
       source = "hashicorp/aws"
       # 使用するプロバイダのバージョン。
       # ~> は、指定した一番右のバージョンのみ最新のものをとってくる。つまり、 "~> 4.66.0" の場合は0が指定した一番マイナーバージョンなので、4.66.5など、0の桁が最新のproviderパッケージがダウンロードされる。
