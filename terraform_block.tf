@@ -6,7 +6,7 @@ terraformブロック:
 terraform {
   # 「このバージョンのterraformなら動きます」と言う宣言。
   # このバージョンに該当しないCLIで実行された場合は、エラーを返す。
-  required_version = "~> 1.3.9"
+  required_version = "~> 1.4.6"
   # 使用するプロバイダを指定する。
   # ※ ここで記述したプロバイダのバージョンが、"terraform init" した際にダウンロードされる。
   required_providers {
