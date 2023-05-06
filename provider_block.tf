@@ -10,20 +10,20 @@ Provider Block
 # デフォルトprovider
 # resources側で、providerの指定がない場合は、これが使われる。
 provider "aws" {
-  
+
   region = "ap-northeast-1"
   # "~/.aws/credential" に設定してあるprofileを指定して、その設定を使うことができる。
   profile = "default"
   # -> aliasパラメータがない場合は、それがデフォルトproviderになる。
-  
+
 }
 
 
 # resource側で、 "provider = aws.aws-west-1-provider" と指定があれば、こちらが使われる。
 provider "aws" {
-  region = "us-west-1"
+  region  = "us-west-1"
   profile = "default"
-  alias = "aws-west-1-provider"
-  
+  alias   = "aws-west-1-provider"
+
 }
 

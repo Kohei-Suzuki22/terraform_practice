@@ -52,13 +52,6 @@ tf.jsonの文法
 
 
 
-# Resource Block
-resource "aws_instance" "ec2demo" {
-  ami = "ami-0e0820ad173f20fbb" #amazon Linux in ap-northeast-1, update as
-  instance_type = "t2.micro"
-}
-
-
 /*
 terraformコマンドの基本コマンド
 
@@ -66,7 +59,10 @@ terraformコマンドの基本コマンド
 -> 作業ディレクトリのリソース作成に必要なプラグインファイルをダウンロードしてくる。
 
 # terraform validate
--> 作業ディレクトリのtfファイルの宣言が、有効であるか検証する。(文法的なミスを確認できる)
+-> 作業ディレクトリのtfファイルの宣言が、有効であるか検証する。(文法的なミスを確認できる) 
+
+# terraform fmt
+-> 作業ディレクトリのtfファイルをフォーマッティングしてくれる。
 
 # terraform plan
 -> 作業ディレクトリのtfファイルの適用でリソースがどのように変化するのかを出力する。(現状のtfstateとの状態の違いを表示する)

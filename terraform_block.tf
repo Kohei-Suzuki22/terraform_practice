@@ -25,7 +25,7 @@ terraform {
       version = "~> 4.66.0"
     }
     random = {
-      source = "hashicorp/random"
+      source  = "hashicorp/random"
       version = "~> 3.5.1"
     }
   }
@@ -34,11 +34,11 @@ terraform {
   # "terraform apply" を実行したら、指定したpathにtfstateファイルを置く。
   backend "s3" {
     bucket = "terraform-practice"
-    key = "tfstate-path/terraform.tfstate"
+    key    = "tfstate-path/terraform.tfstate"
     region = "ap-northeast-1"
   }
-  
-  
+
+
   # プロバイダにメタデータを渡す。
   # Terraform documentation says not needed in many cases (公式ドキュメントが、ほとんどの場合はこの指定は必要ないだろうと記述している。)
   #(必須じゃない。)

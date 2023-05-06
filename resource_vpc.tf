@@ -3,7 +3,7 @@ resource "aws_vpc" "myvpc" {
   tags = {
     "Name" = "myvpc"
   }
-  
+
 }
 
 resource "aws_vpc" "myvpc-us-west" {
